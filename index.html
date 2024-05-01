@@ -1,0 +1,71 @@
+<!--
+  Filename: index.html
+  Project: Phone Number Validator
+  Live Demo: https://jeremy-gammill.github.io/phone-number-validator
+
+  Author: Jeremy Gammill | github.com/jeremy-gammill
+  Date Created: April 26, 2024
+  Last Modified: May 1, 2024
+  License: MIT
+  
+  Description:
+    Developed for the freeCodeCamp JavaScript Algorithms and Data Structures certification.
+  
+    Key Features:
+    - Supports validation for a variety of common US phone number formats.
+    - Displays an appropriate feedback message to the user when receiving invalid input.
+    - Utilizes a custom regular expression (regex) for validation.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Phone Number Validator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <main>
+        <div class="container-title">
+            <p class="title">PHONE<br>NUMBER<br><span class="letter-spacing-reduce">VALIDATOR</span></p>
+        </div>
+        <div class="container-primary">
+            <label for="user-input" class="directions">Enter a phone number:</label>
+            <input id="user-input" type="text" />
+            <div class="btn-container">
+                <button id="check-btn" class="button">Check</button>
+                <button id="clear-btn" class="button">Clear</button>
+            </div>
+        </div>
+        <div id="results-div" class="container-primary hidden">
+        </div>
+        <div class="container-secondary">
+            <p>
+                The term <strong>telephone</strong> is derived from the Greek words τῆλε (tēle, far) and φωνή (phōnē,
+                voice), together meaning <em>distant voice</em>.
+            </p>
+            <p>
+                Examples of <strong>valid</strong> US phone numbers:
+            </p>
+            <div id="example-phone-numbers">
+                <p class="phone-number">1 555-555-5555</p>
+                <p class="phone-number">1 (555) 555-5555</p>
+                <p class="phone-number">1(555)555-5555</p>
+                <p class="phone-number">1 555 555 5555</p>
+                <p class="phone-number">5555555555</p>
+                <p class="phone-number">555-555-5555</p>
+                <p class="phone-number">(555)555-5555</p>
+            </div>
+            <p class="citation">
+                <cite><label>source: </label><a href="https://en.wikipedia.org/wiki/Telephone">Wikipedia</a></cite>
+            </p>
+        </div>
+    </main>
+</body>
+
+<!-- Due to a quirk with the freeCodeCamp live editor, scripts must be placed at the end of the HTML; 'defer' is not sufficient. -->
+<script src="script.js" defer></script>
+
+</html>
